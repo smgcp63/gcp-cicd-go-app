@@ -2,6 +2,9 @@ options:
   logging: 'CLOUD_LOGGING_ONLY'
 steps:
 - name: golang
+  entrypoint: "bash"
+  args: ["-c","go mod init github.com/smgcp63/gcp-cicd-go-app || true && go mod tidy || true"]
+- name: golang
   args: ["go","build", "-o","gcp-cicd-go-app","." ]
 
 artifacts:
