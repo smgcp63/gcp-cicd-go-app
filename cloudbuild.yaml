@@ -1,9 +1,10 @@
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
 steps:
 - name: golang
-  args: ["go","build", "-o","go-app","." ]
+  args: ["go","build", "-o","gcp-cicd-go-app","." ]
 
 artifacts:
   objects:
     location: gs://gcp-cicd-go-app-artifacts/
     paths: ["./gcp-cicd-go-app"]
-    
