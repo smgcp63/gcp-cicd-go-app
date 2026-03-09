@@ -6,3 +6,4 @@ artifacts:
   objects:
     location: gs://gcp-cicd-go-app-artifacts/
     paths: ["./gcp-cicd-go-app"]
+    
